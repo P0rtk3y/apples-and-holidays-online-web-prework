@@ -68,8 +68,9 @@ def all_supplies_in_holidays(holiday_hash)
         puts holiday.to_s.capitalize! + ":" + " #{supply.to_s.join(",")}"
       else holiday == :new_years
         puts holiday.to_s.split.capitalize! + ":" + " #{:new_years.to_s.split("_")}"
-      
-
+      end
+    end
+  end 
 end
 
 def all_holidays_with_bbq(holiday_hash)
