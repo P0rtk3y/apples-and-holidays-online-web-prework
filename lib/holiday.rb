@@ -64,9 +64,9 @@ def all_supplies_in_holidays(holiday_hash)
   holiday_hash.each do |season, holiday_info|
     puts season.to_s.capitalize + ":"
     holiday_info.each do |holiday, supply| 
-      if holiday == :christmas || :thanksgiving
+      if holiday == :christmas || holiday == :thanksgiving
         puts "  " + holiday.to_s.capitalize! + ": " + supply.join(", ")
-      elsif holiday == :new_years || :fourth_of_july || :memorial_day
+      elsif holiday == :new_years || holiday == :fourth_of_july || holiday == :memorial_day
         puts "  " + holiday.to_s.split("_").collect{|w| w.capitalize!}.join(" ") + ": " + supply.join(", ")
       end
     end 
